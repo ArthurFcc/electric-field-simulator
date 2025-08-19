@@ -1,1 +1,1 @@
-# electric-field-simulator
+# Gravity Field Simulator
