@@ -17,10 +17,11 @@ function love.draw()
 end
 
 function love.load()
-	pivot = Pivot:new()
 	object = Object:new()
+	pivot = Pivot:new(3.84e8, object.mass)
 end
 
 function love.update(dt)
-	object:orbit(dt)
+	local objectSpeed = pivot:getOrbitObjectSpeed(3.84e8)
+	object:orbit(dt, objectSpeed)
 end

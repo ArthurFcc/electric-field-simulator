@@ -18,18 +18,19 @@ function Object:new()
 		x = center.x + 150, -- Distance from center
 		y = center.y + 150,
 	}
-	local instance = BaseEntity.new(self, "Moon", 7.3, 5, position, { 1, 1, 1 })
+	local instance = BaseEntity.new(self, "Moon", 7.34e22, 5, position, { 1, 1, 1 })
 	instance.angle = 0
 	return instance
 end
 
-function Object:orbit(dt)
+function Object:orbit(dt, speed)
 	self.position = {
 		x = center.x + 150 * math.cos(self.angle),
 		y = center.y + 150 * math.sin(self.angle),
 	}
 
 	self.angle = self.angle + dt
+	print(self.angle)
 end
 
 return Object

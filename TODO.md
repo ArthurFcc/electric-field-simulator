@@ -1,0 +1,5 @@
+-[x] Implement basic orbit
+-[x] Implement gravitational field strength (g)
+-[] Implement orbit object speed increase based on gravitational strength
+-[] Better implement data using real values (real gravitation numbers and distances)
+-[] Refactor code and remove magic numbers
