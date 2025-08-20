@@ -11,8 +11,6 @@ local Object = require("object")
 local pivot
 local object
 
-local angle = 0
-
 function love.draw()
 	pivot:draw()
 	object:draw()
@@ -24,10 +22,5 @@ function love.load()
 end
 
 function love.update(dt)
-	--moonInstance.position = {
-	--	x = centerX + 150 * math.cos(angle),
-	--	y = centerY + 150 * math.sin(angle),
-	--}
-
-	--angle = angle + dt
+	object:orbit(dt)
 end
